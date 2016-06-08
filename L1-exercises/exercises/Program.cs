@@ -10,30 +10,28 @@ namespace exercises
     {
         static void Main(string[] args)
         {
-            Student first = new Student();
-            first.FirstName = Console.ReadLine();
-            first.LastName = "qqqqqqqqqqq";
-            first.number = "33";
+            //Student first = new Student();
+            //first.FirstName = Console.ReadLine();
+            //first.LastName = "qqqqqqqqqqq";
+            //first.number = "33";
 
-            string fullName = first.FullName;
-            Console.WriteLine(fullName);
- 
- 
+            //string fullName = first.FullName;
+            //Console.WriteLine(fullName);
+
+            Person ivo = new Person(33);
 
         }
         public static void StudentInfo(string firstName, string lastName, string number)
         {
             Console.WriteLine("{0} {1} {2}", firstName, lastName, number);
         }
-
-       
     }
 
     class Student
     {
         public string firstName;
         public string lastName;
-        public string number;   
+        public string number;
 
         public string FirstName
         {
@@ -66,5 +64,15 @@ namespace exercises
             }
         }
     }
- 
+    class Person
+    {
+        private int street;
+
+        public Person(int street)
+        {
+            this.street = street;
+            Console.WriteLine(street);
+        }
+        
+    }
 }
