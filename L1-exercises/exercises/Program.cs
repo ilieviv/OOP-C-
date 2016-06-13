@@ -8,23 +8,30 @@ namespace exercises
 {
     class Program
     {
-        static void Main(string[] args)
+
+        static void Main()
         {
-            int first = int.Parse(Console.ReadLine());
-            int second = int.Parse(Console.ReadLine());
+            var point = new Point(2,3);
 
+            point.XCoordinate = 2;
+            point.YCoordinate = 5;
 
+            var secondPoint = new Point(2, 3);
+            Console.WriteLine(point);
+            ChangeCoordinates(point);
+            Console.WriteLine(point);
+             
         }
 
-        static decimal Fahrenheit(decimal celsius)
+        static void ChangeCoordinates(Point point)
         {
-            decimal result = (celsius - 32)*5 / 9;
-            return result;
+            point.YCoordinate = 0;
+            point.XCoordinate = 0;
         }
-        
+
     }
 
-     
-    
+
+
 
 }
